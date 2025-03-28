@@ -118,3 +118,14 @@ h1 {
     margin-bottom: 2rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .cards__wrapper {
+    width: 120%;
+    overflow-x: hidden;
+  }
+
+  .cards__item__info {
+    padding: 15px;
+  }
+}

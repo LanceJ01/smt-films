@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-        <video src='/videos/trailerfinal.mp4' autoPlay loop muted />
+        <video src='/videos/trailerfinal.mp4' autoPlay loop muted playsInline/>
         <h1>SMT FILMS</h1>
         <p>DIRECTED BY SCHYLER TOBIN</p>
         <div className='hero-btns'>

@@ -1,15 +1,15 @@
 .film__container {
     width: 100%;
-    padding: 200px; /* Add padding to all sides */
-    box-sizing: border-box; /* Ensure padding does not affect the total width and height */
+    padding: 200px;
+    box-sizing: border-box;
 }
 
 .ratio-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625, which is 56.25%) */
-    height: 0; /* This is necessary for the padding-bottom trick to work */
-    background-color: #000; /* Optional: Set background color if you want it */
+    height: 0;
+    background-color: #000;
 }
 
 .ratio-container iframe {
@@ -23,7 +23,8 @@
 /* Mobile version */
 @media (max-width: 768px) {
     .film__container {
-        padding: 10px; /* Smaller padding for mobile */
+        padding: 10px;
+        padding-bottom: 50px;
     }
 
     .ratio-container {
@@ -34,6 +35,7 @@
 
 @media (max-width: 480px) {
     .film__container {
-        padding: 5px; /* Even smaller padding for very small screens */
+        padding: 5px;
+        padding-bottom: 50px;
     }
 }

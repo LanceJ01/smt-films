@@ -5,6 +5,11 @@
     font-family: 'PT Sans', sans-serif;
   }
 
+/*? removes the weird zoom out overflow on mobile */
+  html, body {
+    overflow-x: hidden;
+  }
+
   .home,
   .films,
   .cast,
@@ -17,7 +22,7 @@
   }
   
   .films {
-    /*background-image: url('/public/images/dogdirector-img.png');*/
+    /* background-image: url('/public/images/dogdirector-img.png'); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
