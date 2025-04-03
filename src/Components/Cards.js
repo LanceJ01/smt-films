@@ -10,10 +10,16 @@ function Cards() {
             <div className='cards__wrapper'>
                 <ul className='cards__items'>
                     <CardItem
-                    src='images/trailer-img.jpg'
-                    text='Film #1'
-                    label='Thriller'
-                    path='/films'
+                      src='images/trailer-img.jpg'
+                      text='Feeding A Vampire'
+                      label='Thriller'
+                      path='https://youtu.be/oisUb702hkM?si=z589lKijDLbPmb8l'
+                    />
+                    <CardItem
+                        src='images/dealwitch-img.jpg'
+                        text='A Deal With A Witch'
+                        label='Thriller'
+                        path='https://youtu.be/3ga0dsYM8WY?si=M6HI_don9nyq2R0M'
                     />
                     {/* 
                     Add in new films here

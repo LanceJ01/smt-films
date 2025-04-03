@@ -1,6 +1,6 @@
 .film__container {
     width: 100%;
-    padding: 200px;
+    padding: 150px;
     box-sizing: border-box;
 }
 
@@ -23,7 +23,7 @@
 /* Mobile version */
 @media (max-width: 768px) {
     .film__container {
-        padding: 10px;
+        padding: 20px;
         padding-bottom: 50px;
     }
 
