@@ -1,0 +1,178 @@
+.fav-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #ffffff;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.fav-content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  min-width: 1600px;
+
+}
+
+.fav-video-container {
+  flex: 1;
+  min-width: 60%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fav-ratio {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.fav-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.fav-card {
+  flex: 1;
+  background-color: #242424;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50%;
+  height: auto;
+}
+
+.fav-section {
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+
+.fav-section:last-child {
+  border-bottom: none;
+}
+
+.fav-header {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.fav-body {
+  font-size: 18px;
+}
+
+.fav-footer {
+  font-size: 18px;
+}
+
+.fav-genre,
+.fav-director,
+.fav-cast {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .fav-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10px;
+    min-width: 0;
+  }
+
+  .fav-video-container,
+  .fav-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .fav-card > * {
+    padding: 15px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .fav-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 20px 10px;
+    min-width: 0;
+  }
+
+  .fav-video-container {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .fav-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .fav-header {
+    font-size: 20px;
+  }
+
+  .fav-body {
+    font-size: 14px;
+  }
+
+  .fav-footer {
+    font-size: 14px;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .fav-video-container,
+  .fav-card {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fav-ratio {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .fav-card > * {
+    padding: 10px;
+  }
+
+  .fav-header {
+    font-size: 20px;
+  }
+
+  .fav-body {
+    font-size: 14px;
+  }
+
+  .fav-footer {
+    font-size: 14px;
+  }
+}

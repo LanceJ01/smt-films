@@ -13,13 +13,13 @@ function Cards() {
                       src='images/trailer-img.jpg'
                       text='Feeding A Vampire'
                       label='Thriller'
-                      path='https://youtu.be/oisUb702hkM?si=z589lKijDLbPmb8l'
+                      path='/filmpages/feedingavampire'
                     />
                     <CardItem
                         src='images/dealwitch-img.jpg'
                         text='A Deal With A Witch'
                         label='Thriller'
-                        path='https://youtu.be/3ga0dsYM8WY?si=M6HI_don9nyq2R0M'
+                        path='/filmpages/adealwithawitch'
                     />
                     {/* 
                     Add in new films here

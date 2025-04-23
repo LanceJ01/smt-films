@@ -1,41 +1,96 @@
-.film__container {
-    width: 100%;
-    padding: 150px;
-    box-sizing: border-box;
+.films-page {
+    padding: 2rem;
+    text-align: center;
 }
 
-.ratio-container {
+.films-title {
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: #242424;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.film-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.thumbnail-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625, which is 56.25%) */
-    height: 0;
-    background-color: #000;
+    overflow: hidden;
 }
 
-.ratio-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.film-thumbnail {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Mobile version */
+.film-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.film-label {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    background-color: #52796F;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.film-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.film-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 768px) {
-    .film__container {
-        padding: 20px;
-        padding-bottom: 50px;
+    .films-title {
+        font-size: 2.5rem;
     }
 
-    .ratio-container {
-        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
-        height: 0;
+    .film-title {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .film__container {
-        padding: 5px;
-        padding-bottom: 50px;
+    .films-title {
+        font-size: 2rem;
+    }
+
+    .film-grid {
+        padding: 0 1rem;
+        gap: 1rem;
     }
 }

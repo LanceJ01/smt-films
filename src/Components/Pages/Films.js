@@ -1,24 +1,39 @@
 import React from 'react';
-import '../../App.css';
-import '../FilmContent.css'
+import { Link } from 'react-router-dom';
+import '../FilmContent.css';
 
+const videos = [
+  {
+    title: 'Feeding A Vampire',
+    path: '/filmpages/feedingavampire',
+    thumbnail: '/images/trailer-img.jpg',
+    label: 'Thriller',
+  },
+  {
+    title: 'A Deal With A Witch',
+    path: '/filmpages/adealwithawitch',
+    thumbnail: '/images/dealwitch-img.jpg',
+    label: 'Thriller',
+  }
+];
 
 export default function Films() {
-    return (
-        <div>
-            <h1 className='films'>Films</h1>
-            <div className='film__container'>
-                <div className="ratio-container">
-                    <iframe src="https://www.youtube.com/embed/oisUb702hkM?si=soHJmMVUquTnb7qi"
-                            title="Feeding A Vampire" allowFullScreen></iframe>
-                </div>
+  return (
+    <div className='films-page'>
+      <h1 className='films-title'>Films</h1>
+      <div className='film-grid'>
+        {videos.map((video, index) => (
+          <Link to={video.path} key={index} className="film-card">
+            <div className="film-card-inner">
+              <div className="thumbnail-container">
+                <img src={video.thumbnail} alt={video.title} className="film-thumbnail" />
+                <div className="film-label">{video.label}</div>
+              </div>
+              <div className="film-title">{video.title}</div>
             </div>
-            <div className='film__container'>
-                <div className="ratio-container">
-                    <iframe src="https://www.youtube.com/embed/3ga0dsYM8WY?si=yU1P9TO2_elCVOme"
-                            title="A Deal With A Witch" allowFullScreen></iframe>
-                </div>
-            </div>
-        </div>
-    )
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }
